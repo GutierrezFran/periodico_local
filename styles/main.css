@@ -1,0 +1,114 @@
+main .section{
+    margin-top: 50px;
+    position: relative;
+    
+}
+main .section img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+main .section .article h1{
+    text-align: center;
+}
+main .section .article h2{
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin: 10px 8px;
+}
+main .section2{
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding: 15px 35px;
+    background: rgb(42, 42, 92);
+    color: white;
+    
+}
+main .section2 h2{
+    text-align: center;
+}
+main .section2 h3{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+main .section2 p{
+    text-align: center;
+    margin: 10px;
+}
+main .section2 p button{
+    padding: 5px;
+    font-style: italic;
+    border-radius: 5px;
+}
+main .section2 p a{
+    color: white;
+}
+/*main .section3{
+    width: auto;
+    border: 2px solid pink
+}*/
+main .section3{
+    border: 2px solid pink;
+    
+}
+
+main .section3 .article{
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 80%;
+    flex-wrap: wrap;
+    border: 1px solid #f00;
+}
+main .section3 .article img{
+    width: 100%;
+    height: 100%;
+    
+}
+main .section3 .article h4{
+    font-size: 10px;
+    background: brown;
+    color: white;
+    border: 2px solid #f00;
+}
+main .section3 .article h3{
+    font-size: 16px;
+    text-align: justify;
+    margin: 3px 8px;
+}
+@media (min-width: 1024px){
+    main .section{
+        height: 600px;
+        overflow: hidden;
+    }
+    main .section img{
+        height: auto;
+        margin-top: -100px;
+    }
+    main .section2{
+        width: 45%;
+        margin-top: 10px;
+        float: right;
+        
+        color: white;
+        margin-right: 8px;
+    }
+    main .section3{
+        width: 52%;
+        display: inline;
+        float: left;
+        
+    }
+    main .section3 .article{
+        
+        width: 90%;
+        
+    }
+   
+}

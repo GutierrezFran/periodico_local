@@ -1,0 +1,69 @@
+header{
+    width: 100%;
+    background: #333;
+    color: white;
+    height: 50px;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+}
+
+header .container1 h1{
+    float: left;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+#menu-bar{
+    display: none;
+}
+header .container1 label{
+    float: right;
+    margin: 10px 0px;
+    cursor: pointer;
+    font-size: 25px;
+}
+header .container1 .menu{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    background: rgba(59, 56, 56, 0.9);
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+header .container1 .menu a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 23px;
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+header .container1 .menu a:hover{
+    background: rgba(40, 40, 40, 0.9);
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+} 
+@media (min-width: 1024px) {
+    header .container1 .menu{
+        position: static;        
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        background: #333;;
+    }
+    header .container1 label{
+        display: none;
+    }
+    header .container1 .menu a{
+        border-bottom: none;
+    }
+}

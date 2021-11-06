@@ -1,0 +1,14 @@
+footer{
+    width: 100%;
+    flex-wrap: wrap;
+    display: inline-block;
+    
+    color: black;
+    margin-top: 15px;
+    padding: 25px 8px;
+    text-align: center;
+    
+}
+footer .info-pie a{
+    text-decoration: none;
+}
