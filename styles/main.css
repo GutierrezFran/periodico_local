@@ -48,14 +48,7 @@ main .section2 p button{
 main .section2 p a{
     color: white;
 }
-/*main .section3{
-    width: auto;
-    border: 2px solid pink
-}*/
-main .section3{
-    border: 2px solid pink;
-    
-}
+
 
 main .section3 .article{
     display: block;
