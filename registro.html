@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/registro.css">
+    <script lang="javascript" type="text/javascript" src="javascript/funcionalidad.js"></script>
+
+    <title>Registro suscriptor</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header id="cabecera">
+            <h1>BIENVENIDO A LA PAGINA DE SUSCRIPCION</h1>
+        </header>
+        <main>
+            <div class="datos">
+                <form name="frmregistro" action="#" method="post" enctype="multipart/form-data" onsubmit="return validar(frmregistro);">
+                    <p>
+                        Nombre: <input type="text" name="nombre" placeholder="Nombre" required="required">
+                    </p>
+                    <p>
+                        celular: <input type="text" name="celular" placeholder="Celular" required="required">
+                    </p>
+                    <p>
+                        Correo: <input type="email" name="email" placeholder="Correo" required="required">
+                    </p>
+                    <p>
+                        Usuario: <input type="text" name="usuario" placeholder="Usuario" required="required">
+                    </p>
+                    <p>
+                        contraseña: <input type="password" name="contraseña" placeholder="Contraseña" required="required">
+                    </p>
+                    <p>
+                        <button type="submit" name="registrar">Registrarse</button>
+                        <button type="reset" name="limpiar">Limpiar</button>
+                    </p>
+                </form>
+            </div>
+        </main>
+        <footer id="pie">
+            <div>
+                <small>Todos los derechos reservados 2021 <p>AmaneceInformado.com</p> </small>
+            </div>
+    
+        </footer>
+    </div>
+       
+</body>
+</html>

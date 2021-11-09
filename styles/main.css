@@ -45,10 +45,19 @@ main .section2 p button{
     font-style: italic;
     border-radius: 5px;
 }
-main .section2 p a{
+main .section2 p button:hover{
+    background: -webkit-radial-gradient(center, green, black);
     color: white;
 }
 
+main .section2 p a{
+    color: white;
+    text-decoration: none;
+}
+main .section2 p a:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
 
 main .section3 .article{
     display: block;
@@ -104,4 +113,9 @@ main .section3 .article h3{
         
     }
    
+}
+@media (min-width: 768px) and (max-width:1023px){
+    main .section2{
+        width: 60%;
+    }
 }
