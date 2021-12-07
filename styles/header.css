@@ -5,7 +5,7 @@ header{
     height: 50px;
     position: fixed;
     z-index: 100;
-    top: 5%;
+    top: 0;  /* modificar esta linea a 0px */
     left: 0px;
 }
 
@@ -50,6 +50,78 @@ header .container1 .menu a:hover{
 #menu-bar:checked ~ .menu{
     transform: translateX(0%);
 } 
+
+/* estilos de administradores */
+
+h2{
+    font-size: 30px;
+    color: chocolate;
+    margin-top: 62px;
+    text-align: center;
+}
+.cuerpo{
+    width: 100%;
+    margin: auto;
+    background-color: rgba(118, 185, 118, 0.5);
+    text-align: center;
+    padding: 20px;
+}
+#caja{
+    display: block;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+#boton{
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.cuerpo a{
+    text-align: center;
+    font-size: 20px;
+    color: darkcyan;
+}
+.cuerpo a:hover{
+    text-decoration: none;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+#fila-titulo{
+    border-bottom: solid 1px gray;
+}
+/* estilos de notas */
+
+fieldset{
+    width: 80%;
+    height: auto;
+    margin: 5px auto;
+    text-align: left;
+    padding: 5px;
+    font-style: italic;
+    font-size: 14px;
+}
+#opcion{
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    border: none;
+    background-color: #fff;
+} 
+#opcion:hover{
+    cursor: pointer;
+    background-color: #999;
+}
+
 @media (min-width: 1024px) {
     header .container1 .menu{
         position: static;        
