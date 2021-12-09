@@ -17,7 +17,7 @@
         </header>
         <main>
             <div class="datos">
-                <form name="frmregistro" action="#" method="post" enctype="multipart/form-data" onsubmit="return validar(frmregistro);">
+                <form name="frmregistro" action="suscriptores/suscriptor_guardar.php" method="post" enctype="multipart/form-data">
                     <p>
                         Nombre: <input type="text" name="nombre" placeholder="Nombre" required="required">
                     </p>
@@ -25,13 +25,13 @@
                         celular: <input type="text" name="celular" placeholder="Celular" required="required">
                     </p>
                     <p>
-                        Correo: <input type="email" name="email" placeholder="Correo" required="required">
+                        Correo: <input type="email" name="correo" placeholder="Correo" required="required">
                     </p>
                     <p>
                         Usuario: <input type="text" name="usuario" placeholder="Usuario" required="required">
                     </p>
                     <p>
-                        contraseña: <input type="password" name="contraseña" placeholder="Contraseña" required="required">
+                        contraseña: <input type="password" name="password" placeholder="Password" required="required">
                     </p>
                     <p>
                         <button type="submit" name="registrar">Registrarse</button>

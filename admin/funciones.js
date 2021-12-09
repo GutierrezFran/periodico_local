@@ -15,3 +15,8 @@ function eliminar_nota(cvn){
         location.href='nota_eliminar.php?cvnota='+cvn;
     }
 }
+function eliminar_suscriptor(cvs){
+    if(confirm("Desea eliminar el suscriptor? "+cvs+"\n\nConfirme")){
+        location.href='suscriptor_eliminar.php?cvsuscriptor='+cvs;
+    }
+}

@@ -27,9 +27,7 @@ if(isset($_GET["opcion"])){
     <script lang="javascript" type="text/javascript" src="funciones.js"></script>
     <link rel="stylesheet" href="../styles/style.css"> 
     <link rel="stylesheet" href="../styles/fontello.css">
-                <!--aun no existe la hoja admin_index.css-->
-
-    <!-- <link rel="stylesheet" type="text/css" href="admin/admin_index.css"> -->  <!-- probando si funciona estos estilos -->
+           
 
     <title>Administradores</title>
 </head>
@@ -61,27 +59,26 @@ if(isset($_GET["opcion"])){
                     mensaje($texto,$op);
                 }else if($opcion==0){
                     inicio();
-                }else if($opcion==1){
+                }else if($opcion==1){ /* administradores */
                     if($_SESSION['variable_raro']==true){
                         administradores();
                     }else{
                         inicio();
                     }
                   
-                }else if($opcion==3){
+                }else if($opcion==3){ /* notas */
                     if($_SESSION['variable_raro']==true){
-                       
                         notas();
                     }else{
                         inicio();
                     }
-                    /* modificar opcion==4 para sucriptores */  
-                }else if($opcion==4){
+                    /* para sucriptores */  
+                }else if($opcion==2){
                     if($_SESSION['variable_raro']==true){
-                        
+                        suscriptores();
                     }else{
                         inicio();
-                    } /* modifica opcion == 4 */
+                    } 
                     
                 }else if($opcion==11){
                     if($_SESSION['variable_raro']==true){
@@ -105,7 +102,7 @@ if(isset($_GET["opcion"])){
                         inicio();
                     }
                     
-                }else if($opcion==101){
+                }else if($opcion==101){  /* nueva nota */
                     if($_SESSION['variable_raro']==true){
                         nota();
                     }else{
@@ -120,8 +117,15 @@ if(isset($_GET["opcion"])){
                         inicio();
                     }
                     
+                }else if($opcion==103){  /* listar suscriptores */
+                    if($_SESSION['variable_raro']==true){
+                        suscriptores();
+                    }else{
+                        inicio();
+                    }
+                    
                 }
-                                           
+                                                           
                 ?>               
     
             </section>

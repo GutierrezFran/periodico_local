@@ -7,7 +7,7 @@ include("conexion.php");
 $bd = new BD();
 $bd->conectarse();
 
-$usuario= $_POST["usuario"];
+$usuario= $_GET["usuario"];
 
 $sql= "delete from administradores where usuario='".$usuario."'"; 
 $eliminado= $bd->ejecutarSQL($sql);

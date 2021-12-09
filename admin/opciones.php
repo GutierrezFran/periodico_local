@@ -141,6 +141,7 @@ function notas(){
         <tr>
             <td id="fila-titulo">Titulo</td>
             <td id="fila-titulo">Imagen</td>
+            <td id="fila-titulo">Posicion</td>  
             <td id="fila-titulo">Estado</td>
             <td id="fila-titulo">Eliminar</td>
         </tr>                    
@@ -158,6 +159,7 @@ function notas(){
         
             <td id="fila"><a href="index.php?opcion=102&cvnota='.$fila["cvnota"].'">'.substr($fila["titulo"],0,25).'</a></td>
             <td id="fila">'.$fila["imagen"].'</td>
+            <td id="fila">'.$fila["posicion"].'</td>
             <td id="fila">'.$fila["estado"].'</td>
             <td id="fila"><button type="button" id="boton" name="eliminar" class="icon-trash" onclick="eliminar_nota(\''.$fila["cvnota"].'\');"></button></td>
         </tr>
@@ -295,5 +297,52 @@ function nota_modificar($cvnota){
     }else{
         header("location:index.php?opcion=-1&texto=Nota no encontrada&op=10");
     }
+}
+function suscriptores(){
+    $bd = new BD();
+    $bd->conectarse();
+    $sql = "select * from suscriptores order by cvsuscriptor, nombre DESC"; 
+    $resultado = $bd->ejecutarSQL($sql);
+    $nfilas = mysqli_num_rows($resultado);
+    
+    echo('
+    <h2>Suscriptores</h2>
+    <table cellpadding="0" cellspacing="0"> 
+        <tr>
+            <td id="fila-titulo">Nombre</td>
+            <td id="fila-titulo">Fecha suscripción</td>
+            <td id="fila-titulo">Usuario</td>  
+            <td id="fila-titulo">Estado</td>
+            <td id="fila-titulo">Eliminar</td>
+        </tr>                    
+    ');
+    for($c=0;$c<$nfilas;$c++){
+        $fila = mysqli_fetch_array($resultado);
+        if($c%2==0){
+            echo('<tr background-color="#ffebcd">');
+        }else{
+            echo('<tr>');
+        }
+
+        /* se extraen los datos de la BD de los siguientes campos */
+        echo('
+        
+            <td id="fila">'.substr($fila["nombre"],0,25).'</td>
+            <td id="fila">'.$fila["fechasuscripcion"].'</td>
+            <td id="fila">'.$fila["usuario"].'</td>
+            <td id="fila">'.$fila["estado"].'</td>
+            <td id="fila"><button type="button" id="boton" name="eliminar" class="icon-trash" onclick="eliminar_suscriptor(\''.$fila["cvsuscriptor"].'\');"></button></td>
+        </tr>
+        
+        ');
+    }    
+    echo('
+        
+    </table>
+    
+');
+}
+function suscriptor_nuevo(){
+    
 }
 ?>
