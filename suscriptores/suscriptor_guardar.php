@@ -1,9 +1,9 @@
 <?php
-session_start();
+/* session_start();
 if($_SESSION['variable_raro']==false){
     header("location:index.php");
-}
-include("conexion.php");
+} */
+include("../admin/conexion.php");
 $bd = new BD();
 $bd->conectarse();
 
@@ -19,10 +19,11 @@ $sql= "insert suscriptores (nombre,celular,correo,fechasuscripcion,usuario, pass
 $insertado= $bd->ejecutarSQL($sql);
 
 if($insertado){
+    /* header("location:index.php?opcion=-1&texto=SUSCRIPTOR REGISTRADO CORRECTAMENTE"); */
     header("location:index.php?opcion=-1&texto=SUSCRIPTOR REGISTRADO CORRECTAMENTE");
 
 }else{
-    header("location:index.php?opcion=-1&texto=HUBO UN ERROR EN EL REGISTRO DEL SUSCRIPTOR&op=103");
+    header("location:index.php?opcion=-1&texto=HUBO UN ERROR EN EL REGISTRO DEL SUSCRIPTOR");
 
 }
 

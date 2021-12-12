@@ -274,11 +274,11 @@ function nota_modificar($cvnota){
         
         <input type="text" name="titulo" id="caja" placeholder="Titulo de la nota" required value="'.$fila["titulo"].'">
         <textarea name="nota" id="caja" placeholder="Describe la nota" cols="20" rows="10" required>'.$fila["nota"].'</textarea>
-        <img src"../images/'.$fila["imagen"].'" style="margin-top:10px" width="70%"/>
+        <img src="../images/'.$fila["imagen"].'" style="margin-top:10px" width="25%"/>
 
         <fieldset>
         <legend>Cambiar imagen de la nota</legend>
-        <input type="file" name="imagen" id="caja" required>
+        <input type="file" name="imagen" id="caja">
         </fieldset>
     
         <fieldset>
@@ -342,7 +342,5 @@ function suscriptores(){
     
 ');
 }
-function suscriptor_nuevo(){
-    
-}
+
 ?>

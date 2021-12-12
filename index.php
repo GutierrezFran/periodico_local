@@ -29,7 +29,7 @@
                 <a href="#">MUNICIPIO</a>
                 <a href="covid19.html">COVID19</a>
                 <a href="registro.html">SUSCRIBETE</a>
-                <a href="#">CONTACTO</a>
+                <a href="index.php#contacto">CONTACTO</a>
                 <!-- <a href="admin/index.php">ADMIN</a> -->
             </nav>
         </div>
@@ -39,23 +39,22 @@
         <section class="section">
             <article class="article">
                 <?php
-                    $sql="select * from notas where estado=1 and posicion=1 order by cvnota desc";
+                    $sql="select * from notas where estado=1 and posicion=1";
                     $resultado=$bd->ejecutarSQL($sql);
                     $nfilas=mysqli_num_rows($resultado);
-                    for($c=0;$c<$nfilas;$c++){
-                        $fila=mysqli_fetch_array($resultado);
+                    $fila= mysqli_fetch_array($resultado);
                         echo('
                         <figure>
-                        <img src="./images/'.$fila["imagen"].'" alt="camion de basura">
+                        <img src="./images/'.$fila["imagen"].'" style="height:800px">
                         <figcaption>
-                            <h1>'.$fila["titulo"].'</h1>
+                            <h1 style="position:absolute">'.$fila["titulo"].'</h1>
                             <h2>Esperan que limpien bien el pavimento una vez que
                                 termine el tianguis este martes 2 de noviembre
                             </h2>
                         </figcaption>
                     </figure>
                         ');
-                    }
+                    
                 ?>
                 
             </article>
@@ -67,7 +66,7 @@
                         <h2>BIENVENIDO A NUESTRO SITIO WEB DE NOTICIAS</h2>
                         <h3>Inicia sesion o registrate</h3>
                     </hgroup>
-                    <form name="frmlogin" action="./suscriptores/validar.php" method="post" enctype="multipart/form-data">
+                    <form name="frmlogin" action="#" method="post" enctype="multipart/form-data">
                         <p><input type="text" name="usuario" placeholder="Usuario" required="required"></p>
                         <p><input type="password" name="password" placeholder="Password" required="required"></p>
                         <p><button type="submit" class="icon-lock-filled">Iniciar sesión</button></p>
@@ -78,32 +77,28 @@
         </section>  
         <section class="section3">
             <article class="article">
-                <hgroup>
+                <?php
+                    $sql="select * from notas where estado=1 and posicion=2 order by cvnota desc";
+                    $resultado=$bd->ejecutarSQL($sql);
+                    $nfilas=mysqli_num_rows($resultado);
+                    for ($i=0; $i <$nfilas ; $i++) { 
+                        $fila=mysqli_fetch_array($resultado);
+                        echo('
+                    <hgroup>
                     <h4>ESTADO</h4>
-                    <h3>TITULAR DE LA OCDE RECONOCE AVANCE ECONOMICO
-                    DEL GOBIERNO DE OMAR FAYAD EN HIDALGO Y SUSCRIBE
-                    ACUERDO PARA DESARROLLO SUSTENTABLE. <span>09</span>
+                    <h3>'.$fila["nota"].'. 
                     </h3>
                 </hgroup>
-                <img src="images/fayad.jpg" alt="Omar Fayad">
+                <img src="images/'.$fila["imagen"].'">
+                    ');
+                    }
+                ?>
             </article>
-            <article class="article">
-                <hgroup>
-                    <h4>YAHUALICA</h4>
-                    <h3>EL XANTOLO SE VIVE EN SU MAXIMO ESPLENDOR. <span>16</span> </h3>
-                </hgroup>
-            </article>
-            <article class="article">
-                <hgroup>
-                    <h4>HUEJUTLA</h4>
-                    <h3>POR XANTOLO 2021, HUEJUTLA ES PUNTO DE CONCENTRACION
-                        DE VISITANTES. <span>06</span> </h3>
-                </hgroup>
-            </article>
+            
         </section>
         
     </main>  
-    <footer class="pie">
+    <footer class="pie" id="contacto">
         <div class="info-pie">
             <p><small>Todos los derechos reservados 2021 AmaneceInformado.com</small></p>
             <p><small><address>email: AmaneceInformado@gmail.com</address></small></p>

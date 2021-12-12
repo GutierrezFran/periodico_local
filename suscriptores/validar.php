@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("conexion.php");
+include("validar.php");
 $bd = new BD();
 $bd->conectarse();
 

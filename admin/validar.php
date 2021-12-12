@@ -8,7 +8,7 @@ $usuario= $_POST['usuario'];
 $password= $_POST['password'];
 
 $sql = "select * from administradores 
-where usuario='".$usuario."' and password='".$password."' and estado=1";  /* AES_ENCRYPT('".$password."','*fran') */
+where usuario='".$usuario."' and password=AES_ENCRYPT('".$password."','*fran') and estado=1";  /* AES_ENCRYPT('".$password."','*fran') | '".$password."' */
 
 $resultado = $bd->ejecutarSQL($sql);
 $nfilas = mysqli_num_rows($resultado);

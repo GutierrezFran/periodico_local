@@ -9,7 +9,6 @@ $bd->conectarse();
 
 $cvsuscriptor= $_GET["cvsuscriptor"];
 
-
 $sql= "delete from suscriptores where cvsuscriptor=".$cvsuscriptor.""; 
 $eliminado= $bd->ejecutarSQL($sql);
 
